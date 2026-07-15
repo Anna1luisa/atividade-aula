@@ -1,0 +1,127 @@
+/* Reset e Configurações Gerais */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+html { scroll-behavior: smooth; } 
+
+/* CONFIGURAÇÃO DO PAPEL DE PAREDE ANIMADO */
+body { 
+  margin: 0;
+  padding-bottom: 80px; 
+  color: #e1e1e6; 
+  background-color: #0f0f11; 
+  
+  /* Gradiente escuro focado no roxo, azul e magenta para não atrapalhar a leitura */
+  background: linear-gradient(-45deg, #000000, #440de9, #123b5a, #220f29, #9999a8);
+  background-size: 400% 400%;
+  
+  /* Animação contínua e suave */
+  animation: coresFluidas 25s ease infinite;
+}
+
+a { text-decoration: none; text-shadow: none; }
+
+/* Barra de Navegação Superior (Header) com efeito transparente moderno */
+header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 8%; 
+  background-color: rgba(22, 22, 26, 0.85); /* Semi-transparente */
+  backdrop-filter: blur(12px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #222226; 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+}
+.logo { font-size: 24px; font-weight: bold; color: #9871ff; display: flex; align-items: center; gap: 8px; letter-spacing: -0.5px; }
+.logo span { color: #ffffff; font-weight: 300; }
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { color: #c4c4cc; font-weight: 500; transition: color 0.2s; }
+nav ul li a:hover { color: #9871ff; }
+.btn-header { background-color: transparent; border: 2px solid #9871ff; color: #9871ff; padding: 8px 18px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.btn-header:hover { background-color: #9871ff; color: #121214; }
+
+/* Seção Principal (Hero) e Busca */
+.hero { max-width: 1200px; margin: 60px auto 40px; padding: 0 20px; text-align: center; }
+.hero h1 { font-size: 46px; color: #ffffff; margin-bottom: 12px; font-weight: 800; letter-spacing: -1px; }
+.hero p { color: #8d8d99; font-size: 18px; margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.search-container { max-width: 600px; margin: 0 auto 40px; display: flex; gap: 10px; }
+.search-input { flex: 1; padding: 16px 20px; background-color: #1c1c21; border: 1px solid #2d2d34; border-radius: 8px; color: #fff; font-size: 16px; outline: none; }
+.btn-search { background-color: #9871ff; color: #ffffff; border: none; padding: 0 28px; border-radius: 8px; font-weight: bold; font-size: 16px; }
+
+/* Grade de Academias (3 colunas lado a lado) */
+.gym-grid { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+.gym-card { background-color: #1c1c21; border: 1px solid #2d2d34; border-radius: 12px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+.gym-card:hover { transform: translateY(-4px); border-color: #9871ff; }
+.gym-image { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #2d2d34; }
+.gym-info { padding: 24px; }
+.gym-name { font-size: 22px; color: #fff; margin-bottom: 6px; font-weight: 700; }
+.gym-location { color: #8d8d99; font-size: 14px; margin-bottom: 20px; }
+
+/* Semáforo de Lotação */
+.capacity-section { margin-bottom: 20px; background-color: #121214; padding: 12px; border-radius: 8px; border: 1px solid #222226; }
+.capacity-header { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
+.capacity-bar-bg { width: 100%; height: 8px; background-color: #2d2d34; border-radius: 4px; overflow: hidden; }
+.capacity-bar-fill { height: 100%; border-radius: 4px; }
+.fill-low { width: 25%; background-color: #00b37e; }
+.fill-medium { width: 65%; background-color: #fba94c; }
+.fill-high { width: 90%; background-color: #f75a68; }
+.status-text { font-weight: bold; }
+.text-low { color: #00b37e; }
+.text-medium { color: #fba94c; }
+.text-high { color: #f75a68; }
+
+/* Tabelas e Botões */
+.plans-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; text-align: left; }
+.plans-table th { color: #8d8d99; padding-bottom: 8px; border-bottom: 1px solid #2d2d34; font-weight: 500; }
+.plans-table td { padding: 10px 0; color: #e1e1e6; border-bottom: 1px dashed #2d2d34; }
+.plans-table tr:last-child td { border-bottom: none; }
+.plan-price { text-align: right; font-weight: bold; color: #9871ff; }
+.grid-botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.btn-card { display: flex; align-items: center; justify-content: center; width: 100%; background-color: #2d2d34; color: #fff; padding: 12px; border-radius: 6px; font-weight: bold; font-size: 14px; transition: all 0.2s; border: none; }
+.btn-card:hover { background-color: #3a3a42; color: #9871ff; }
+.btn-ver-mais { background-color: #9871ff; color: #fff; }
+.btn-ver-mais:hover { background-color: #8257e5; color: #fff; }
+
+/* Painel de Detalhes */
+.divisoria { border-top: 1px solid #2d2d34; max-width: 1200px; margin: 40px auto; padding-top: 40px; text-align: center; }
+.divisoria h2 { font-size: 28px; color: #fff; margin-bottom: 10px; font-weight: 700; }
+.detalhes-container { max-width: 1200px; margin: 0 auto; padding: 0 20px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.monitor-card { background: #1c1c21; border: 1px solid #2d2d34; padding: 30px; border-radius: 12px; text-align: center; display: flex; flex-direction: column; justify-content: center; height: 100%; min-height: 350px; }
+.monitor-card h2 { font-size: 18px; margin-bottom: 20px; color: #9871ff; }
+.painel-pessoas-grande { margin-bottom: 30px; }
+.painel-pessoas-grande span { font-size: 72px; font-weight: 800; color: #fff; display: block; line-height: 1; }
+.painel-pessoas-grande p { color: #8d8d99; font-size: 14px; margin-top: 5px; }
+.detalhes-info-box { background: #1c1c21; border: 1px solid #2d2d34; padding: 30px; border-radius: 12px; }
+.detalhes-info-box h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+.detalhe-sub { color: #8d8d99; font-size: 15px; margin-bottom: 25px; }
+.grafico-box { background: #121214; padding: 20px; border-radius: 10px; border: 1px solid #2d2d34; margin-bottom: 25px; }
+.grafico-box h3 { font-size: 15px; margin-bottom: 4px; }
+.barras-grafico { display: flex; justify-content: space-between; align-items: flex-end; height: 120px; margin-top: 15px; padding-top: 10px; border-bottom: 1px solid #2d2d34; }
+.coluna-grafico { display: flex; flex-direction: column; align-items: center; flex: 1; height: 100%; justify-content: flex-end; }
+.barra-fill { width: 65%; border-radius: 3px 3px 0 0; }
+.coluna-grafico span { font-size: 11px; color: #8d8d99; margin-top: 8px; }
+.v-baixa { background-color: #00b37e; }
+.v-media { background-color: #fba94c; }
+.v-alta { background-color: #f75a68; }
+.beneficios-box { margin-bottom: 25px; }
+.beneficios-box h3 { font-size: 16px; margin-bottom: 10px; color: #9871ff; }
+.beneficios-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.beneficios-box ul li { font-size: 14px; color: #c4c4cc; }
+.btn-comprar { width: 100%; background-color: #00b37e; color: #fff; border: none; padding: 15px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-align: center; display: block; }
+.btn-comprar:hover { background-color: #029469; }
+
+/* REGRAS DE ANIMAÇÃO (KEYFRAMES) */
+@keyframes coresFluidas {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Suporte para acessibilidade (redução de movimento) */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none !important;
+    background: #0f0f11 !important;
+  }
+}
