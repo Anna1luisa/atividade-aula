@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- Container Principal do Formulário -->
+        <div class="form-container">
+            <h2>Criar Conta</h2>
+            <p class="subtitle">Preencha os campos abaixo para se cadastrar</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@provedor.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="password" name="senha" placeholder="Crie uma senha forte" required autocomplete="new-password">
+                    
+                    <details class="sugestao-container">
+                        <summary class="btn-sugerir">💡 Sugerir senha forte</summary>
+                        <div class="sugestao-box">
+                            <span class="sugestao-titulo">Copie a senha sugerida:</span>
+                            <code class="sugestao-texto">K9#mX2!pL9$vQ7</code>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Digite a senha novamente" required autocomplete="new-password"
+                           oninput="this.setCustomValidity(this.value != document.getElementById('password').value ? 'A senha não está igual' : '')">
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Eu aceito os <a href="#">Termos de Uso</a> e <a href="#">Políticas de Privacidade</a>.</label>
+                </div>
+
+                <button type="submit" class="btn-enviar">Finalizar Cadastro</button>
+            </form>
+        </div>
+
+        <!-- Links adicionais inseridos embaixo do formulário -->
+        <footer class="form-footer">
+            <a href="#">Informações da Empresa</a>
+            <span class="divisor">•</span>
+            <a href="#">Ajuda e Suporte</a>
+            <span class="divisor">•</span>
+            <a href="#">Atendimento ao Cliente</a>
+        </footer>
+    </div>
+
+</body>
+</html>
